@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $HOSTNAME =~ ^n9code ]]
+if [[ $HELLO_ITS_ME ]]
 then
     export ARROW_RF=""
     export ARROW_RE=""

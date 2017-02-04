@@ -1,3 +1,0 @@
-#!/bin/bash
-
-source $GIT_SOURCE_HOME/git-completion.bash
