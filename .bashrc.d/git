@@ -1,7 +1,10 @@
 #!/bin/bash
 
-GIT_SOURCE_HOME="$(dirname $(readlink -f $(which git)))/../etc/bash_completion.d"
-GIT_PROMPT_FILE="/usr/lib/git-core/git-sh-prompt"
+if [ "$IS_MAC" == "1" ]
+then
+    GIT_SOURCE_HOME="$(dirname $(greadlink -f $(which git)))/../etc/bash_completion.d"
+    GIT_PROMPT_FILE="$GIT_SOURCE_HOME/git-prompt.sh"
+fi
 
 if [ -f "$GIT_PROMPT_FILE" ]
 then
@@ -12,7 +15,7 @@ else
         function __git_ps1 {
             return
         }
-        echo "Error: git prompt file not found."
+        # echo "Error: git prompt file not found."
     fi
 fi
 

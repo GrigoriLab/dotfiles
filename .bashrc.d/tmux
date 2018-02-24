@@ -3,9 +3,9 @@
 # Define the variable depending on which host I am on, i.e. when
 # on my laptop, the init style should be the active one,
 # otherwise - inactive.
-if [ $HELLO_ITS_ME ]
+if [ $HELLO_ITS_ME == "1" ]
 then
-    export TMUX_INIT_STYLE="$HOME/.tmux/styles-active.conf"
+    export TMUX_INIT_STATE="active"
 else
-    export TMUX_INIT_STYLE="$HOME/.tmux/styles-inactive.conf"
+    export TMUX_INIT_STATE="inactive"
 fi
