@@ -2,7 +2,7 @@
 
 # set -x
 # When on my personal laptop, I do not need the hostname in the prompt
-HOSTNAME_REGEX="^(bagrat13|Bagrat-Aznauryan-.*).*$"
+HOSTNAME_REGEX="^grigori.*$"
 if [[ "`hostname`" =~ $HOSTNAME_REGEX ]]
 then
     export HELLO_ITS_ME=1
@@ -47,3 +47,4 @@ shopt -s histappend
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export PATH=$PATH:$HOME/scripts
