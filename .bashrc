@@ -2,7 +2,7 @@
 
 # set -x
 # When on my personal laptop, I do not need the hostname in the prompt
-HOSTNAME_REGEX="^grigori.*$"
+HOSTNAME_REGEX="^ubuntu$"
 if [[ "`hostname`" =~ $HOSTNAME_REGEX ]]
 then
     export HELLO_ITS_ME=1
